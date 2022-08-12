@@ -1,0 +1,24 @@
+{% extends "encyclopedia/layout.html" %}
+{% load static %}
+
+{% block title %}
+    Encyclopedia
+{% endblock %}
+
+{% block nav %}
+    <div>
+        <a href="{% url 'randomEntry' %}">Random Page</a>
+    </div>
+    <div>
+        <a href="{{title}}/edit">Edit Page</a>
+    </div>
+    <div>
+        <a href="{{title}}/delete">Delete Page</a>
+    </div>
+{% endblock %}
+
+{% block body %}
+
+    {{ entry | safe }}
+
+{% endblock %}

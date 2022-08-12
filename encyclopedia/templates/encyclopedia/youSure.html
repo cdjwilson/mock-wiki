@@ -1,0 +1,8 @@
+<h1>Are You Sure You Want To Delete {{title}}</h1>
+<form method="POST">
+    {% csrf_token %}
+    <button>Yes</button>
+</form>
+<form method="GET" action="{% url 'index' %}">
+    <button>No</button>
+</form>
